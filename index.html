@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amrita Temporary Release Request</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0b1120, #1e293b);
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .sheet {
+      width: 100%;
+      max-width: 900px;
+      background: #f8fafc;
+      color: #0f172a;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 16px;
+      border: 1px solid #cbd5e1;
+      text-align: left;
+    }
+
+    th {
+      background: #dbeafe;
+      font-size: 1rem;
+    }
+
+    tr:nth-child(even) {
+      background: #f1f5f9;
+    }
+
+    .critical {
+      color: #dc2626;
+      font-weight: bold;
+    }
+
+    .warning {
+      color: #ca8a04;
+      font-weight: bold;
+    }
+
+    .safe {
+      color: #16a34a;
+      font-weight: bold;
+    }
+
+    .decision-box {
+      text-align: center;
+      padding: 30px 20px;
+      background: #e0f2fe;
+    }
+
+    .decision-box h2 {
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    button {
+      padding: 14px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .approve {
+      background: #22c55e;
+      color: white;
+    }
+
+    .deny {
+      background: #ef4444;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    #response {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #1e3a8a;
+      min-height: 30px;
+    }
+
+    .footer {
+      padding: 25px;
+      background: #0f172a;
+      color: #f8fafc;
+      font-style: italic;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .small-note {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sheet">
+    <div class="header">
+      <h1>AMRITA TEMPORARY RELEASE REQUEST</h1>
+      <p>Official Chai Break Intervention Portal</p>
+    </div>
+
+    <table>
+      <tr>
+        <th>CATEGORY</th>
+        <th>STATUS</th>
+      </tr>
+      <tr>
+        <td>Institution</td>
+        <td>Amrita College of Sciences</td>
+      </tr>
+      <tr>
+        <td>Current Status</td>
+        <td>Surviving</td>
+      </tr>
+      <tr>
+        <td>Academic Pressure</td>
+        <td class="critical">Extremely Concerning</td>
+      </tr>
+      <tr>
+        <td>Exam Schedule</td>
+        <td class="critical">Ruthless</td>
+      </tr>
+      <tr>
+        <td>Human Rights Status</td>
+        <td class="warning">Temporarily Suspended</td>
+      </tr>
+      <tr>
+        <td>Chai Requirement</td>
+        <td class="warning">Urgently Recommended</td>
+      </tr>
+      <tr>
+        <td>Requested Break Duration</td>
+        <td>30 Minutes</td>
+      </tr>
+      <tr>
+        <td>Purpose</td>
+        <td>Chai + Mental Stabilization</td>
+      </tr>
+      <tr>
+        <td>Risk to Academic Recovery</td>
+        <td class="safe">Minimal</td>
+      </tr>
+      <tr>
+        <td>Recommendation</td>
+        <td class="safe">Grant Temporary Freedom</td>
+      </tr>
+      <tr>
+        <td>Amrita Damage Level</td>
+        <td class="critical">Ongoing</td>
+      </tr>
+      <tr>
+        <td>Chai Break Management Candidate</td>
+        <td>You already know who</td>
+      </tr>
+    </table>
+
+    <div class="decision-box">
+      <h2>Decision Pending: Her Mercy</h2>
+      <button class="approve" onclick="approveRequest()">Grant Temporary Freedom</button>
+      <button class="deny" onclick="denyRequest()">Continue Academic Suffering</button>
+
+      <div id="response"></div>
+
+      <div class="small-note">
+        I chose structured documentation over random disturbance.
+      </div>
+    </div>
+
+   <div class="footer">
+  “Not trying to interfere with Amrita’s ongoing mission to academically destroy you… but if you’ve got 30 mins today, I’d like to submit myself as chai break management.”<br><br>
+  
+  PS: I do understand you’ve got another exam day after tomorrow, so if the answer is no, that is completely understandable. This request fully respects ongoing academic warfare.
+</div>
+  </div>
+
+  <script>
+    function approveRequest() {
+      document.getElementById("response").innerHTML =
+        "Request Approved. Chai Break Management will proceed accordingly.";
+    }
+
+    function denyRequest() {
+      document.getElementById("response").innerHTML =
+        "Understood. May your sacrifice in the academic battlefield be remembered.";
+    }
+  </script>
+
+</body>
+</html>
